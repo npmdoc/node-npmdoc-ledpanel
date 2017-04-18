@@ -1,0 +1,771 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/netbeast/ledpanel#readme">ledpanel (v1.0.4)</a>
+</h1>
+<h4>Control Adafruit 8x8 bicolor led Panel on the Raspberry Pi</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ledpanel">module ledpanel</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.clear">
+            function <span class="apidocSignatureSpan">ledpanel.</span>clear
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.matrix">
+            function <span class="apidocSignatureSpan">ledpanel.</span>matrix
+            <span class="apidocSignatureSpan">(matrix, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.printPixel">
+            function <span class="apidocSignatureSpan">ledpanel.</span>printPixel
+            <span class="apidocSignatureSpan">(x, y, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ledpanel.</span>helper</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ledpanel.clear">module ledpanel.clear</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.clear.clear">
+            function <span class="apidocSignatureSpan">ledpanel.</span>clear
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ledpanel.helper">module ledpanel.helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.helper.checkDimension">
+            function <span class="apidocSignatureSpan">ledpanel.helper.</span>checkDimension
+            <span class="apidocSignatureSpan">(mat, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.helper.clear">
+            function <span class="apidocSignatureSpan">ledpanel.helper.</span>clear
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.helper.join">
+            function <span class="apidocSignatureSpan">ledpanel.helper.</span>join
+            <span class="apidocSignatureSpan">(mat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.helper.joinPrint">
+            function <span class="apidocSignatureSpan">ledpanel.helper.</span>joinPrint
+            <span class="apidocSignatureSpan">(mat, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.helper.matrix">
+            function <span class="apidocSignatureSpan">ledpanel.helper.</span>matrix
+            <span class="apidocSignatureSpan">(mat, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.helper.printPixel">
+            function <span class="apidocSignatureSpan">ledpanel.helper.</span>printPixel
+            <span class="apidocSignatureSpan">(row, col, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.helper.read">
+            function <span class="apidocSignatureSpan">ledpanel.helper.</span>read
+            <span class="apidocSignatureSpan">(column, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.helper.register">
+            function <span class="apidocSignatureSpan">ledpanel.helper.</span>register
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ledpanel.matrix">module ledpanel.matrix</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.matrix.matrix">
+            function <span class="apidocSignatureSpan">ledpanel.</span>matrix
+            <span class="apidocSignatureSpan">(matrix, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ledpanel.printPixel">module ledpanel.printPixel</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.printPixel.printPixel">
+            function <span class="apidocSignatureSpan">ledpanel.</span>printPixel
+            <span class="apidocSignatureSpan">(x, y, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ledpanel" id="apidoc.module.ledpanel">module ledpanel</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.clear" id="apidoc.element.ledpanel.clear">
+        function <span class="apidocSignatureSpan">ledpanel.</span>clear
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clear = function (callback) {
+	helper.clear(function(err) {
+		if(typeof callback === 'function') return callback(err)
+		else if(err) throw err
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+ledpanel.printPixel(x,y, callback)
+```
+
+Clear all
+
+```
+ledpanel.<span class="apidocCodeKeywordSpan">clear</span>(callback)
+```
+
+##examples
+
+```
+var ledpanel = require('ledpanel')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.matrix" id="apidoc.element.ledpanel.matrix">
+        function <span class="apidocSignatureSpan">ledpanel.</span>matrix
+        <span class="apidocSignatureSpan">(matrix, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matrix = function (matrix, callback)Â&nbsp;{
+	async.series([
+		async.apply(helper.register),
+		//Function to be executed here
+		async.apply(helper.matrix, matrix)
+	], function(err, results) {
+		if(typeof callback === 'function') return callback(err)
+		else if(err) throw err
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+##api
+
+Color the matrix
+
+```
+ledpanel.<span class="apidocCodeKeywordSpan">matrix</span>(matrix, callback)
+```
+
+Color one pixe
+
+```
+ledpanel.printPixel(x,y, callback)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.printPixel" id="apidoc.element.ledpanel.printPixel">
+        function <span class="apidocSignatureSpan">ledpanel.</span>printPixel
+        <span class="apidocSignatureSpan">(x, y, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">printPixel = function (x, y, callback) {
+	async.series([
+		async.apply(helper.register),
+		async.apply(helper.printPixel(x,y))
+	], function(err, results) {
+		if(typeof callback === 'function') return callback(err)
+		else if(err) throw err
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+ledpanel.matrix(matrix, callback)
+```
+
+Color one pixe
+
+```
+ledpanel.<span class="apidocCodeKeywordSpan">printPixel</span>(x,y, callback)
+```
+
+Clear all
+
+```
+ledpanel.clear(callback)
+```
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ledpanel.clear" id="apidoc.module.ledpanel.clear">module ledpanel.clear</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.clear.clear" id="apidoc.element.ledpanel.clear.clear">
+        function <span class="apidocSignatureSpan">ledpanel.</span>clear
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clear = function (callback) {
+	helper.clear(function(err) {
+		if(typeof callback === 'function') return callback(err)
+		else if(err) throw err
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+ledpanel.printPixel(x,y, callback)
+```
+
+Clear all
+
+```
+ledpanel.<span class="apidocCodeKeywordSpan">clear</span>(callback)
+```
+
+##examples
+
+```
+var ledpanel = require('ledpanel')
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ledpanel.helper" id="apidoc.module.ledpanel.helper">module ledpanel.helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.helper.checkDimension" id="apidoc.element.ledpanel.helper.checkDimension">
+        function <span class="apidocSignatureSpan">ledpanel.helper.</span>checkDimension
+        <span class="apidocSignatureSpan">(mat, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkDimension = function (mat, callback) {
+	
+	if(!mat) return callback(new Error('matrix not defined.'))
+	row = mat.length
+	if(row !== 8) return callback(new Error('Dimension of matrix must be 8x8'))
+	for (var i = 0; i &lt;= 7; i++) {
+		if(mat[i].length &lt; 8) return callback(new Error('Dimenstion of matrix must be 8x8'))
+	}
+	return callback(null)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.helper.clear" id="apidoc.element.ledpanel.helper.clear">
+        function <span class="apidocSignatureSpan">ledpanel.helper.</span>clear
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clear = function (callback) {
+	var col = 0
+
+	async.whilst(
+		function () { return col &lt;=7 },
+		function (done) {
+			col ++
+			bus.writeByte(address, redCol[col-1], 0x00, function(err) {
+				return done(err)
+			})
+
+		},
+		function (err) {
+			return callback(err)
+		}
+	)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+ledpanel.printPixel(x,y, callback)
+```
+
+Clear all
+
+```
+ledpanel.<span class="apidocCodeKeywordSpan">clear</span>(callback)
+```
+
+##examples
+
+```
+var ledpanel = require('ledpanel')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.helper.join" id="apidoc.element.ledpanel.helper.join">
+        function <span class="apidocSignatureSpan">ledpanel.helper.</span>join
+        <span class="apidocSignatureSpan">(mat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">join = function (mat) {
+	var columns = []
+	//Join al the elements of the same column on the same variable and change from binary to hex
+	for(var col = 0; col &lt;= 7; col++) {
+		var aux = []
+		for(var row =0; row &lt;=7; row++) {
+			//Save the column on the aux variable
+			aux.push(mat[row][col])
+		}
+		//Join the array to one value
+		var value = aux.reverse().join("")
+		value = parseInt(value, 2) //Binary to integer
+		columns.push('0x' + value.toString(16)) //Save on colum with hexadecimal format
+	}
+	return columns
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			return done(null)
+		})
+}
+
+//This function prints the matrix on the ledPanel
+helper.joinPrint = function (mat, callback) {
+
+	var columns = helper.<span class="apidocCodeKeywordSpan">join</span>(mat)
+	var col = 0
+
+	async.whilst(
+		function () { return col &lt;=7 },
+		function (done) {
+			col ++
+			bus.writeByte(address, redCol[col-1], Number(columns[col-1]), function(err, none) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.helper.joinPrint" id="apidoc.element.ledpanel.helper.joinPrint">
+        function <span class="apidocSignatureSpan">ledpanel.helper.</span>joinPrint
+        <span class="apidocSignatureSpan">(mat, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">joinPrint = function (mat, callback) {
+
+	var columns = helper.join(mat)
+	var col = 0
+
+	async.whilst(
+		function () { return col &lt;=7 },
+		function (done) {
+			col ++
+			bus.writeByte(address, redCol[col-1], Number(columns[col-1]), function(err, none) {
+				return done(err)
+			})
+		},
+		function (err) {
+			return callback(err)
+		}
+	)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.helper.matrix" id="apidoc.element.ledpanel.helper.matrix">
+        function <span class="apidocSignatureSpan">ledpanel.helper.</span>matrix
+        <span class="apidocSignatureSpan">(mat, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matrix = function (mat, done) {
+
+	async.series([
+		async.apply(helper.checkDimension,mat),
+		async.apply(helper.clear),
+		async.apply(helper.joinPrint,mat)
+		], function(err, results) {
+			if(err) return done(err)
+			return done(null)
+		})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+##api
+
+Color the matrix
+
+```
+ledpanel.<span class="apidocCodeKeywordSpan">matrix</span>(matrix, callback)
+```
+
+Color one pixe
+
+```
+ledpanel.printPixel(x,y, callback)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.helper.printPixel" id="apidoc.element.ledpanel.helper.printPixel">
+        function <span class="apidocSignatureSpan">ledpanel.helper.</span>printPixel
+        <span class="apidocSignatureSpan">(row, col, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">printPixel = function (row, col, callback) {
+
+	//First we have to read wich leds are actived
+	var pxsOn = helper.read(col, function(err, value) {
+
+		if(err) return callback(err)
+
+		//Convert the value to a number and decimal base
+		numberValue = parseInt(value, 16)
+		//We print the pixel keeping the rest of pixels already colored
+		//We pass the number as an hexadecimal one. //REVIEWWW
+		var pxs = redRow[row] | numberValue
+		bus.writeByteSync(address, redCol[col], Number('0x' + pxs.toString(16)), function(err, none) {
+			if(err) return callback(err)
+			return callback(null)
+		})
+
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+ledpanel.matrix(matrix, callback)
+```
+
+Color one pixe
+
+```
+ledpanel.<span class="apidocCodeKeywordSpan">printPixel</span>(x,y, callback)
+```
+
+Clear all
+
+```
+ledpanel.clear(callback)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.helper.read" id="apidoc.element.ledpanel.helper.read">
+        function <span class="apidocSignatureSpan">ledpanel.helper.</span>read
+        <span class="apidocSignatureSpan">(column, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (column, callback) {
+
+	return bus.readWord(address, redCol[column], function(err, word) {
+		if(err) return callback(err)
+		return callback(null, word.toString(16))
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	return columns
+}
+
+//This function prints only one pixel on the ledPanel
+helper.printPixel= function (row, col, callback) {
+
+	//First we have to read wich leds are actived
+	var pxsOn = helper.<span class="apidocCodeKeywordSpan">read</span>(col, function(err, value) {
+
+		if(err) return callback(err)
+
+		//Convert the value to a number and decimal base
+		numberValue = parseInt(value, 16)
+		//We print the pixel keeping the rest of pixels already colored
+		//We pass the number as an hexadecimal one. //REVIEWWW
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.helper.register" id="apidoc.element.ledpanel.helper.register">
+        function <span class="apidocSignatureSpan">ledpanel.helper.</span>register
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (done) {
+	async.series([
+		function(callback){
+			bus.writeByte(address, 0x21, 0x00, function(err) {
+				if(err) return callback(err, null)
+				return callback(null)
+			})
+		},
+		//Registering Led Panel
+		function(callback){
+			bus.writeByte(address, 0x81, 0x00, function(err) {
+				if(err) return callback(err, null)
+				return callback(null)
+			})
+		},
+		//Registering Led Panel
+		function(callback){
+			bus.writeByte(address, 0xEF, 0x00, function(err) {
+				if(err) return callback(err, null)
+				return callback(null)
+			})
+	}], function(err, result){
+		if(err) return done(err)
+			var col = 0
+
+			async.whilst(
+				function () { return col &lt;=7 },
+				function (done) {
+					col ++
+					bus.writeByte(address, redColAux[col-1], 0x00, function(err) {
+						return done(err)
+					})
+
+				},
+				function (err) {
+					return done(err)
+				}
+			)
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ledpanel.matrix" id="apidoc.module.ledpanel.matrix">module ledpanel.matrix</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.matrix.matrix" id="apidoc.element.ledpanel.matrix.matrix">
+        function <span class="apidocSignatureSpan">ledpanel.</span>matrix
+        <span class="apidocSignatureSpan">(matrix, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matrix = function (matrix, callback)Â&nbsp;{
+	async.series([
+		async.apply(helper.register),
+		//Function to be executed here
+		async.apply(helper.matrix, matrix)
+	], function(err, results) {
+		if(typeof callback === 'function') return callback(err)
+		else if(err) throw err
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+##api
+
+Color the matrix
+
+```
+ledpanel.<span class="apidocCodeKeywordSpan">matrix</span>(matrix, callback)
+```
+
+Color one pixe
+
+```
+ledpanel.printPixel(x,y, callback)
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ledpanel.printPixel" id="apidoc.module.ledpanel.printPixel">module ledpanel.printPixel</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ledpanel.printPixel.printPixel" id="apidoc.element.ledpanel.printPixel.printPixel">
+        function <span class="apidocSignatureSpan">ledpanel.</span>printPixel
+        <span class="apidocSignatureSpan">(x, y, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">printPixel = function (x, y, callback) {
+	async.series([
+		async.apply(helper.register),
+		async.apply(helper.printPixel(x,y))
+	], function(err, results) {
+		if(typeof callback === 'function') return callback(err)
+		else if(err) throw err
+	})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+ledpanel.matrix(matrix, callback)
+```
+
+Color one pixe
+
+```
+ledpanel.<span class="apidocCodeKeywordSpan">printPixel</span>(x,y, callback)
+```
+
+Clear all
+
+```
+ledpanel.clear(callback)
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>

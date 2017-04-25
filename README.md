@@ -1,4 +1,7 @@
-# api documentation for  [ledpanel (v1.0.4)](https://github.com/netbeast/ledpanel#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ledpanel.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ledpanel) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ledpanel.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ledpanel)
+# npmdoc-ledpanel
+
+#### basic api documentation for  [ledpanel (v1.0.4)](https://github.com/netbeast/ledpanel#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ledpanel.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ledpanel) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ledpanel.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ledpanel)
+
 #### Control Adafruit 8x8 bicolor led Panel on the Raspberry Pi
 
 [![NPM](https://nodei.co/npm/ledpanel.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ledpanel)
@@ -66,7 +69,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "version": "1.0.4"
+    "version": "1.0.4",
+    "bin": {}
 }
 ```
 

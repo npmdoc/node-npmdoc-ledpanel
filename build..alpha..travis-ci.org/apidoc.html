@@ -96,19 +96,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.ledpanel.clear">module ledpanel.clear</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.clear.clear">
-            function <span class="apidocSignatureSpan">ledpanel.</span>clear
-            <span class="apidocSignatureSpan">(callback)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
     <li class="apidocModuleLi"><a href="#apidoc.module.ledpanel.helper">module ledpanel.helper</a><ol>
 
         <li>
@@ -185,32 +172,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.ledpanel.matrix">module ledpanel.matrix</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.matrix.matrix">
-            function <span class="apidocSignatureSpan">ledpanel.</span>matrix
-            <span class="apidocSignatureSpan">(matrix, callback)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.ledpanel.printPixel">module ledpanel.printPixel</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.ledpanel.printPixel.printPixel">
-            function <span class="apidocSignatureSpan">ledpanel.</span>printPixel
-            <span class="apidocSignatureSpan">(x, y, callback)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -231,20 +192,18 @@
 	})
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-```
-ledpanel.printPixel(x,y, callback)
-```
+	], function(err, results) {
+		if(typeof callback === &#x27;function&#x27;) return callback(err)
+		else if(err) throw err
+	})
+}
 
-Clear all
-
-```
-ledpanel.<span class="apidocCodeKeywordSpan">clear</span>(callback)
-```
-
-##examples
-
-```
-var ledpanel = require(&#x27;ledpanel&#x27;)
+ledpanel.clear = function (callback) {
+	helper.<span class="apidocCodeKeywordSpan">clear</span>(function(err) {
+		if(typeof callback === &#x27;function&#x27;) return callback(err)
+		else if(err) throw err
+	})
+}
 ...</pre></li>
     </ul>
 
@@ -305,63 +264,25 @@ ledpanel.printPixel(x,y, callback)
 	})
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-```
-ledpanel.matrix(matrix, callback)
-```
-
-Color one pixe
-
-```
-ledpanel.<span class="apidocCodeKeywordSpan">printPixel</span>(x,y, callback)
-```
-
-Clear all
-
-```
-ledpanel.clear(callback)
-```
-...</pre></li>
-    </ul>
+	})
+}
 
 
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.ledpanel.clear" id="apidoc.module.ledpanel.clear">module ledpanel.clear</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.ledpanel.clear.clear" id="apidoc.element.ledpanel.clear.clear">
-        function <span class="apidocSignatureSpan">ledpanel.</span>clear
-        <span class="apidocSignatureSpan">(callback)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">clear = function (callback) {
-	helper.clear(function(err) {
+ledpanel.printPixel = function (x, y, callback) {
+	async.series([
+		async.apply(helper.register),
+		async.apply(helper.<span class="apidocCodeKeywordSpan">printPixel</span>(x,y))
+	], function(err, results) {
 		if(typeof callback === &#x27;function&#x27;) return callback(err)
 		else if(err) throw err
 	})
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-```
-ledpanel.printPixel(x,y, callback)
-```
+}
 
-Clear all
-
-```
-ledpanel.<span class="apidocCodeKeywordSpan">clear</span>(callback)
-```
-
-##examples
-
-```
-var ledpanel = require(&#x27;ledpanel&#x27;)
+ledpanel.clear = function (callback) {
 ...</pre></li>
     </ul>
+
+
 
 
 </div>
@@ -417,20 +338,18 @@ var ledpanel = require(&#x27;ledpanel&#x27;)
 	)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-```
-ledpanel.printPixel(x,y, callback)
-```
+	], function(err, results) {
+		if(typeof callback === &#x27;function&#x27;) return callback(err)
+		else if(err) throw err
+	})
+}
 
-Clear all
-
-```
-ledpanel.<span class="apidocCodeKeywordSpan">clear</span>(callback)
-```
-
-##examples
-
-```
-var ledpanel = require(&#x27;ledpanel&#x27;)
+ledpanel.clear = function (callback) {
+	helper.<span class="apidocCodeKeywordSpan">clear</span>(function(err) {
+		if(typeof callback === &#x27;function&#x27;) return callback(err)
+		else if(err) throw err
+	})
+}
 ...</pre></li>
     </ul>
 
@@ -576,21 +495,21 @@ ledpanel.printPixel(x,y, callback)
 	})
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-```
-ledpanel.matrix(matrix, callback)
-```
+	})
+}
 
-Color one pixe
 
-```
-ledpanel.<span class="apidocCodeKeywordSpan">printPixel</span>(x,y, callback)
-```
+ledpanel.printPixel = function (x, y, callback) {
+	async.series([
+		async.apply(helper.register),
+		async.apply(helper.<span class="apidocCodeKeywordSpan">printPixel</span>(x,y))
+	], function(err, results) {
+		if(typeof callback === &#x27;function&#x27;) return callback(err)
+		else if(err) throw err
+	})
+}
 
-Clear all
-
-```
-ledpanel.clear(callback)
-```
+ledpanel.clear = function (callback) {
 ...</pre></li>
     </ul>
 
@@ -679,91 +598,6 @@ helper.printPixel= function (row, col, callback) {
 	})
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.ledpanel.matrix" id="apidoc.module.ledpanel.matrix">module ledpanel.matrix</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.ledpanel.matrix.matrix" id="apidoc.element.ledpanel.matrix.matrix">
-        function <span class="apidocSignatureSpan">ledpanel.</span>matrix
-        <span class="apidocSignatureSpan">(matrix, callback)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">matrix = function (matrix, callback) {
-	async.series([
-		async.apply(helper.register),
-		//Function to be executed here
-		async.apply(helper.matrix, matrix)
-	], function(err, results) {
-		if(typeof callback === &#x27;function&#x27;) return callback(err)
-		else if(err) throw err
-	})
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-```
-
-##api
-
-Color the matrix
-
-```
-ledpanel.<span class="apidocCodeKeywordSpan">matrix</span>(matrix, callback)
-```
-
-Color one pixe
-
-```
-ledpanel.printPixel(x,y, callback)
-```
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.ledpanel.printPixel" id="apidoc.module.ledpanel.printPixel">module ledpanel.printPixel</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.ledpanel.printPixel.printPixel" id="apidoc.element.ledpanel.printPixel.printPixel">
-        function <span class="apidocSignatureSpan">ledpanel.</span>printPixel
-        <span class="apidocSignatureSpan">(x, y, callback)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">printPixel = function (x, y, callback) {
-	async.series([
-		async.apply(helper.register),
-		async.apply(helper.printPixel(x,y))
-	], function(err, results) {
-		if(typeof callback === &#x27;function&#x27;) return callback(err)
-		else if(err) throw err
-	})
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-```
-ledpanel.matrix(matrix, callback)
-```
-
-Color one pixe
-
-```
-ledpanel.<span class="apidocCodeKeywordSpan">printPixel</span>(x,y, callback)
-```
-
-Clear all
-
-```
-ledpanel.clear(callback)
-```
-...</pre></li>
     </ul>
 
 
